@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+.container{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}    
+
+/* MAIN SCREEN */
+    /* Main screen's header */
+
+.wrapper{
+    position: relative;
+    width: 650px;
+    height: 600px;
+    background-color: white;
+    margin: 10vh auto;
+    padding-bottom: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.055);
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+
+.gallery-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 650px !important;
+    margin: 0px auto;
+    
+}
+
+.gallery-header h4{
+    float: left;
+    font-size: 35px;
+    padding-top: 15px;
+    font-weight: 500;
+}
+
+.gallery-header .option{
+    display: flex;
+    float: right;
+    padding-right: 10px;
+    font-size: 27px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.option .profile-edit-btn{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    padding-top: 3px;
+}
+.option .profile-delete-btn{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    padding-top: 3px;
+}
+
+.option .profile-edit-btn:hover{
+    background-color: #ccc;
+    transition: 0.5s;
+}
+
+.option .profile-delete-btn:hover{
+    background-color: #ccc;
+    transition: 0.5s;
+}
+
+.option i{
+    padding-top: 15px;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/carousel.css" />
+    <script src="https://kit.fontawesome.com/75207b72ca.js" crossorigin="anonymous"></script>
+    <title>Linh</title>
+
+</head>
+<body>
+    <div class="container">
+
+<!-- Main Screen -->
+        <div class="wrapper">
+            <div class="gallery-header">
+                <h4 class="gallery-title"></h4>
+
+                <div class="option">
+                    <div class="profile-edit-btn">
+                            <a class="button" href="#" onclick="openPopup()"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </div>
+                    <div class="profile-delete-btn">
+                            <i style="color:red;" class="fa-solid fa-xmark"></i>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="gallery-body">
+                <!-- Store uploaded images -->
+                <div class="images-wrap"></div>
+                <!-- Bottom slider -->
+                <div class="bottom-sliders">
+                    <!-- <span class="dot2" onclick="currentSlideCarousel(1)"></span>
+                    <span class="dot2" onclick="currentSlideCarousel(2)"></span>
+                    <span class="dot2" onclick="currentSlideCarousel(3)"></span> -->
+                </div>
+                <!-- Next and previous buttons -->
+                <a class="prev-slide" onclick="plusSlidesCarousel(-1)" style="left: 0;
+                border-radius: 3px 0 0 3px;">&#10094;</a>
+                <a class="next-slide" onclick="plusSlidesCarousel(1)" style="right: 0;
+                border-radius: 3px 0 0 3px;">&#10095;</a>
+            </div>
+        </div>
+
+<!-- Modal Screen -->
+        <div class="pop-up" id="pop-up">
+            <div class="popup-content" >
+                <div class="popup-header">
+                    <h4 class="modal-title">Title</h4>
+                    <span onclick="closePopup()"><i class="fa-solid fa-xmark"></i></i></span>
+                    
+                </div>
+
+                <form class="modal-form">
+                    <label id="titleLabel">TITLE</label>
+                    <input type="text" id="title" name="title" placeholder="" value="" />
+                </form>
+
+                <br>
+
+                <div class="popup-body">
+                    <div class="popup-wrapper">
+                        <!-- Images for the carousel -->
+                        <div class="images-div"></div>
+
+                        <!-- Bottom sliders for the carousel -->
+                        <div class="btm-sliders"></div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                </div>
+                <br>
+                <div class="popup-footer">
+                    <div class="btn-container">
+                        <button class="add-image-btn">
+                            <i class="fas fa-image"></i> Add Images
+                        </button>
+
+                        <label id="button-label">*The image size must not exceed 100MB</label>
+                        <button class="save-changes-btn"onclick="closePopup()">
+                            Save Changes
+                        </button>
+                    </div>
+
+                    <input id="default-btn" type="file" hidden />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variable
+        var data = {
+          title: "Title",
+          images: [],
+        };
+    </script>
+    
+    <script src="./js/modal.js"></script>
+    <script src="./js/main_carousel.js"></script>
+    <script src="./js/modal_carousel.js"></script>
+</body>
+</html>
